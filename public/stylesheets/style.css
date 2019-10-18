@@ -1,6 +1,6 @@
 
 body{
-  /* background-image: url("movie.jpeg"); */
+  background-image: url("movie.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -8,9 +8,9 @@ body{
 }
 
 .jumbotron {
-  background-image: url("movie.jpeg");
+  /* background-image: url("movie.jpeg"); */
   color: darkblue;
-  opacity: .75;
+
   margin-top: 20px;
 }
 

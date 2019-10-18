@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
-  var emailInput = $("input#email-input");
-  var passwordInput = $("input#password-input");
+  var emailInput = signUpForm.find("input.email-input");
+  var passwordInput = signUpForm.find ("input.password-input");
   var firstNameInput = $("input#firstName-input");
   var lastNameInput = $("input#lastName-input");
   var phoneInput = $("input#phone-input");
