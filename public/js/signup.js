@@ -3,6 +3,7 @@ $(document).ready(function () {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var confirmPasswordInput = $("input#sign-up-password")
   var firstNameInput = $("input#firstName-input");
   var lastNameInput = $("input#lastName-input");
   var phoneInput = $("input#phone-input");
@@ -13,6 +14,7 @@ $(document).ready(function () {
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
+      confirmPassword: confirmPasswordInput.val().trim(),
       fName: firstNameInput.val().trim(),
       lName: lastNameInput.val().trim(),
       phone: phoneInput.val().trim()
@@ -30,7 +32,19 @@ $(document).ready(function () {
     $.post("/api/signup", userData)
       .then(function (data) {
         console.log(data)
-        window.location.replace("/members");
+        
+        if (!data.message) {
+          
+          window.location.replace("/members");
+        }
+        else {
+          console.log(data.message);
+          // alert(data.message)
+          $("#alert .message").text(err.responseJSON);
+          $("#alert").fadeIn(500);
+          // window.location.reload();
+
+        }
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
@@ -54,7 +68,7 @@ $(document).ready(function () {
   // }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .message").text(err.responseJSON);
     $("#alert").fadeIn(500);
   }
 });
