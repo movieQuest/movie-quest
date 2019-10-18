@@ -3,10 +3,10 @@ create database `passport_demo`;
 use `passport_demo`;
 
 
-
+drop database movies_actor_db;
 -------database--------
-create DATABASE movies&actor_db;
-use movies&actor_db;
+create DATABASE movies_actor_db;
+use movies_actor_db;
 -------actors schema----------
 create table Actor(
     Id integer(2) not null auto_increment,
@@ -19,7 +19,7 @@ create table Actor(
 
 
 ----movies schema -------
-create table Movies_name(
+create table Movies(
     Id integer(2) not null auto_increment,
     Movie_name varchar(20) not null,
     Release_year integer(4),
