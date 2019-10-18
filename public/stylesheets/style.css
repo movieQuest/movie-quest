@@ -1,3 +1,10 @@
+
+body{
+  background-image: url('https://cdn.pixabay.com/photo/2016/01/29/09/56/hands-1167614_1280.jpg');
+  background-size: cover;
+
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
