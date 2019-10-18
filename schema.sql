@@ -5,8 +5,7 @@ use `passport_demo`;
 
 drop database movies_actor_db;
 -------database--------
-create DATABASE movies_actor_db;
-use movies_actor_db;
+
 -------actors schema----------
 create table Actor(
     Id integer(2) not null auto_increment,
