@@ -16,15 +16,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   
-    Actors.associate = function(models) {
-      // Associating Author with Posts
-      // When an Author is deleted, also delete any associated Posts
-      Actors.hasMany(models.Movies, {
-        onDelete: "cascade"
-      });
-    };
+    // Actors.associate = function(models) {
+    //   // Associating Author with Posts
+    //   // When an Author is deleted, also delete any associated Posts
+    //   Actors.hasMany(models.Movies, {
+    //     onDelete: "cascade"
+    //   });
+    // };
   
     return Actors;
   };
 
-  
+  //please update
