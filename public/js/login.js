@@ -12,11 +12,13 @@ $(document).ready(function() {
       password: passwordInput.val().trim()
     };
 
+    //only checks if a field is blank
+    //maybe change to something that's not an alert after MVP
     if (!userData.email || !userData.password) {
-      alert(userData.email.message)
+      alert("Please fill out all form fields.")
       return; 
     }
-
+    
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
     emailInput.val("");
@@ -29,7 +31,12 @@ $(document).ready(function() {
       email: email,
       password: password
     })
-      .then(function() {
+      .then(function (res) {
+        // console.log(res);
+        $.get("/login").then(function (data) {
+          console.log(" in get in post");
+          
+        })
         window.location.replace("/members");
         // If there's an error, log the error
       })

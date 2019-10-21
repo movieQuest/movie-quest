@@ -26,6 +26,10 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
+    } else {
+      console.log("bad");
+      
+      res.json({ "message": "invalid user name or password" });
     }
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
