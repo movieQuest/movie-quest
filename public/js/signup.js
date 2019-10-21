@@ -39,9 +39,9 @@ $(document).ready(function () {
         }
         else {
           console.log(data.message);
-          // alert(data.message)
-          $("#alert .message").text(err.responseJSON);
-          $("#alert").fadeIn(500);
+           alert(data.message)
+          // $("#alert .message").text(err.responseJSON);
+          // $("#alert").fadeIn(500);
           // window.location.reload();
 
         }
