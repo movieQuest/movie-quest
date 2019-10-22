@@ -1,7 +1,7 @@
 
 
       // Initial array of movies
-      var movies = "";
+      //var movies = "";
 
 
 
