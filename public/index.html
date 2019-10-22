@@ -51,65 +51,49 @@
       <h1 class="text-center animated infinite bounce delay-2s"><i class=" fa fa-film" ></i> MovieQuest <i class="fa fa-question-circle"></i></h1>
       <hr>
       <h2 class="text-center">Looking for a new movie to watch</h2>
-      <h2 class="text-center">Fill out the survey to find your favorite actors, directors, genres movies. We will find
-        movies for you to watch.</h2>
+      <h2 class="text-center">Sign up and fill out the survey to find movies with your favorite actors, directors, and genres.</h2>
       <br>
        <!-- search panel --> 
-            <div class="col-sm-10 col-md-offset-1">
+            <div class="col-sm-6 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading searchPar">
-                        <h3 class="panel-title">Search Movie</h3>
+                        <h3 class="panel-title">SEARCH MOVIE</h3>
                     </div>
                     <div class="panel-body">
                         <form>
                             <div class="form-group">
                                 <label for="search"></label>
                                 <input type="text" class="form-control" id="search">   </div>
-                            <div class="form-group">
-                                <label for="numRecords">Number of movies to Retreive:</label>
-                                <select class="form-control" id="numRecords">
-                                    <option value=1>1</option>
-                                    <option value=5 selected>5</option>
-                                    <option value=10>10</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-default" id="searchBtn">Search</button>
-                            <button type="button" class="btn btn-default reset" id="reset">Clear Results</button>
+
+
+                            <button type="submit" class="btn btn-default" id="searchBtn">SEARCH</button>
+                            <button type="button" class="btn btn-default reset" id="reset">CLEAR RESULTS</button>
 
       <!-- <div class="text-center">
         <a href="/survey"><button type="button" class="btn btn-lg btn-primary"><span
               class="glyphicon glyphicon-list-alt"></span> Survey</button></a> -->
       </div>
-
       
 
 <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form class="login">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control email-input" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control password-input"  placeholder="Password">
-              </div>
-              <button type="submit" id="modal-submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
 
 
 <!-- Modal -->
@@ -160,7 +144,6 @@
   </div> -->
 
 
-  
       <script type="text/javascript" src="js/login.js"></script>
       <script type="text/javascript" src="js/signup.js"></script>
       <script type="text/javascript" src="js/movies.js"></script>
