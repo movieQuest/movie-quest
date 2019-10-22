@@ -3,15 +3,9 @@
       // Initial array of movies
       var movies = "";
 
-
-
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       $("#searchBtn").on("click", function(event){
         event.preventDefault();
-        // $('#myInput').trigger('focus')
-
-        $('#myModal').modal('toggle')
-        
         var movie = $("#search").val();
         console.log(movie);
         var queryURLPre = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
@@ -21,24 +15,16 @@
             queryURL += "+"
           }else{
             queryURL += queryURLPre[i];
-          
           }
-
         }
-        $("#search").val("");
         console.log(queryURL);
-
-
-        
-
-
 
         // Creating an AJAX call for the specific movie button being clicked
         $.ajax({
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-console.log(response);
+
           // Creating a div to hold the movie
           var movieDiv = $("<div class='movie'>");
 
@@ -77,10 +63,9 @@ console.log(response);
 
           // Appending the image
           movieDiv.append(image);
-        $(".modal-body").html(movieDiv)
-       
+
+         
         });
-        
 });
       
 
