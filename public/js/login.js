@@ -5,12 +5,14 @@ $(document).ready(function() {
   var passwordInput = loginForm.find("input.password-input");
 
   // When the form is submitted, we validate there's an email and password entered
-  loginForm.on("submit", function(event) {
+  $(document).on("click", "#modal-submit", function(event) {
     event.preventDefault();
+    // alert("Your login click");
     var userData = {
-      email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      email: $(".email-input").val().trim(),
+      password: $('.password-input').val().trim()
     };
+    console.log(userData)
 
     //only checks if a field is blank
     //maybe change to something that's not an alert after MVP
@@ -37,7 +39,7 @@ $(document).ready(function() {
           console.log(" in get in post");
           
         })
-        window.location.replace("/members");
+        window.location.replace("/survey");
         // If there's an error, log the error
       })
       .catch(function(err) {
