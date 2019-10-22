@@ -41,15 +41,11 @@
                     <div class="panel-body">
                         <form role="form">
 
-                            <h3><strong>About You</strong></h3>
-                            <h3>Name (Required)</h3>
-                            <input type="text" name="" id="name" class="form-control" required>
-
                             <h3><strong>Survey Questions</strong></h3>
                             <hr>
 
                             <h3>How old are you?.</h3>
-                            <select data-placeholder="" class="chosen-select" id="q1">
+                            <select data-placeholder="" class="chosen-select" id="age">
                                 <option value="kids">0-13</option>
                                 <option selected="teenage">13-19</option>
                                 <option value="adult">19 and above </option>
@@ -57,7 +53,7 @@
                             </select>
 
                             <h3>What is your favorite kind of movie?.</h3>
-                            <select data-placeholder="" class="chosen-select" id="q1">
+                            <select data-placeholder="" class="chosen-select" id="movietype">
                                 <option value="Thriller">Thriller</option>
                                 <option selected="selected" value="comedy">Comedy</option>
                                 <option value="horror">Horror</option>
@@ -68,19 +64,19 @@
                                 <option value="drama">Drama</option>
                             </select>
                             <h3>Who is your most favorite movie celebrity living today?</h3>
-                            <label for="favorite">Favorite Celebrity:</label>
+                            <label for="celebrity">Favorite Celebrity:</label>
 
-                            <input type="text" id="favorite" name="favorite" required minlength="4" maxlength="32s"
+                            <input type="text" id="celebrity" name="celebrity" required minlength="4" maxlength="32s"
                                 size="10">
                             <div class="survey-submit-actions center-text clearfix" style="margin-top:32px"></div>
-                            </select>
+
                             <h3>Out of all the movies you have ever seen, which is your most favorite?</h3>
-                            <label for="favorite">Favorite Movie:</label>
+                            <label for="favoritemovie">Favorite Movie:</label>
 
-                            <input type="text" id="favorite" name="favorite" required minlength="4" maxlength="32s"
-                                size="10">
+                            <input type="text" id="favoritemovie" name="favoritemovie" required minlength="4"
+                                maxlength="32s" size="10">
                             <div class="survey-submit-actions center-text clearfix" style="margin-top:32px"></div>
-                            </select>
+
 
 
                             <button type="submit" id="submit" class="btn btn-primary">Submit</button>
@@ -116,8 +112,8 @@
 
         <footer class="footer">
             <div class="container">
-                <p class="bold"><a href="/api/friends">API Friends Link</a> |
-                    <a href="https://github.com/7saikal/heroku.git" target="_blank">GitHub Repo</a></p>
+                <!-- <p class="bold"><a href="/api/friends">API Friends Link</a> |
+                    <a href="https://github.com/7saikal/heroku.git" target="_blank">GitHub Repo</a></p> -->
             </div>
         </footer>
 
@@ -137,39 +133,27 @@
         // Grab the URL of the website
         var currentURL = window.location.origin;
         // Capture the form inputs
-        $("#submit").on("click", function () {
-            //event.preventDefault();
-
-            if (($('#name').val().trim() !== "") && ($('#photo').val().trim() !== "")) {
-                // Create an object for the user's data
-                var userData = {
-                    name: $("#name").val(),
-                    photo: $("#photo").val(),
-                    scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
-                }
-
-
-                // AJAX post the data to the friends API.
-                $.post(currentURL + "/api/friends", userData, function (data) {
-
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#matchName").text(data.name);
-                    $('#matchImg').attr("src", data.photo);
-
-                    // Show the modal with the best match
-                    $("#resultsModal").modal('toggle');
-                    // clear the input fields in the form
-                    $("#name").val("");
-                    $("#photo").val("");
-
-                });
-            } else {
-                $(".modal-title").text("Missing required information");
-                $(".modal-body").html("<h3>Please complete the form before submitting</h3>");
-                $("#resultsModal").modal('toggle');
-
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            var data = {
+                age: $("#age").val(),
+                movietype: $("#movietype").val(),
+                celebrity: $("#celebrity").val(),
+                favoritemovie: $("#favoritemovie").val(),
             }
-            return false;
+            console.log(data)
+            $.post("/api/survey", data)
+                .then(function (data) {
+                    console.log(data)
+
+
+                })
+                .catch (function(error){
+                    console.log (error)
+
+                })
+
+
         });
 
         // modal logic
