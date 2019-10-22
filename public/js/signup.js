@@ -35,7 +35,7 @@ $(document).ready(function () {
         
         if (!data.message) {
           
-          window.location.replace("/members");
+          window.location.replace("/survey");
         }
         else {
           console.log(data.message);
