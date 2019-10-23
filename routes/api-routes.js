@@ -1,6 +1,7 @@
 
 var axios = require("axios");
 var keys = require("../keys");
+console.log(keys)
 var db = require("../models");
 var passport = require("../config/passport.js");
 var flash = require("connect-flash");
