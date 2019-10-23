@@ -72,7 +72,7 @@ $("#searchBtn").on("click", function (event) {
 
     // Appending the image
     movieDiv.append(image);
-    $(".modal-body").html(movieDiv)
+    $(".movie-search-results").html(movieDiv)
 
   });
 
