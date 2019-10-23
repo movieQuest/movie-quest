@@ -33,7 +33,7 @@ module.exports = function(app) {
         phone: req.body.phone
       })
         .then(function() {
-          res.redirect(307, "/signup");
+          res.redirect(307, "/login");
         })
         .catch(function(err) {
           res.status(401).json(err);
