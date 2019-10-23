@@ -1,8 +1,7 @@
-<img width="1526" alt="Screen Shot 2019-10-23 at 1 06 03 AM" src="https://user-images.githubusercontent.com/52087686/67363598-56359480-f533-11e9-8b2e-cff996a43e9b.png">
+<img width="1409" alt="Screen Shot 2019-10-23 at 2 48 19 PM" src="https://user-images.githubusercontent.com/52087686/67428823-836e5b00-f5a4-11e9-9f5d-5aae25d02207.png">
 
 
-   Do you like watching movies in particular genres? Then this is the app you looking for. This is full stack web application that serves as a personal media library to keep track of movies that you would like to watch as well as the ones that you have watched already and save it as favorite.
-
+   Do you like watching movies in particular genres? Then this is the app you looking for.
 ##### [Click here to access our app](https://damp-falls-66003.herokuapp.com/)
 
   ## Home page
