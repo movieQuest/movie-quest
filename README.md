@@ -6,7 +6,7 @@
 ##### [Click here to access our app](https://damp-falls-66003.herokuapp.com/)
 
   ## Home page
-<img width="1680" alt="main page" src="https://user-images.githubusercontent.com/52087686/67365638-9bf45c00-f537-11e9-844d-68b1f00dec89.png">
+<img width="1680" alt="mainpage" src="https://user-images.githubusercontent.com/52087686/67416940-61b5a980-f58d-11e9-8a6a-2cc3feb582a4.png">
 
 #####  Search result
 
