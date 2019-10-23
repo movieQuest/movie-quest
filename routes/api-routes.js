@@ -1,5 +1,4 @@
 
-require("dotenv").config();
 var axios = require("axios");
 var keys = require("../keys");
 var db = require("../models");
@@ -34,7 +33,7 @@ module.exports = function(app) {
         phone: req.body.phone
       })
         .then(function() {
-          res.redirect(307, "/api/login");
+          res.redirect(307, "/login");
         })
         .catch(function(err) {
           res.status(401).json(err);
@@ -116,23 +115,23 @@ module.exports = function(app) {
   
           //ACTOR BASED CALCULATIONS
          
-          if (
-            res.data.Actors.toLowerCase()
-              .split(", ")
-              .includes(actor.toLowerCase())
-          ) {
-            currentChecker++;
-          }
+          // if (
+          //   res.data.Actors.toLowerCase()
+          //     .split(", ")
+          //     .includes(actor.toLowerCase())
+          // ) {
+          //   currentChecker++;
+          // }
 
          
-          if (director === res.data.Director) {
-            currentChecker++
-          };
+          // if (director === res.data.Director) {
+          //   currentChecker++
+          // };
 
-          // WRITER CHECK
-          if (res.data.Writer.split(', '.includes(favWriters[0]))) {
-            currentChecker++
-          }
+          // // WRITER CHECK
+          // if (res.data.Writer.split(', '.includes(favWriters[0]))) {
+          //   currentChecker++
+          // }
   
           // CHECK TO SEE IF ITS THE BEST MOVIE RECOMMENDATION
           if (currentChecker > topCheck) {

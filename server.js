@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+require("dotenv").config();
 var flash = require("connect-flash")
 var express = require("express");
 var session = require("express-session");
