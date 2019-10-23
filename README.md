@@ -24,7 +24,6 @@
 - Font awsome (Style)
 - Cards, Modal
 - Express.js 
-- Handlebars 
 - Heroku 
 - MySQL
 - Sequelize 
@@ -42,5 +41,7 @@ This is basics of login password authentication
 - via email & password
 - Log out
 
+### MicSearch function
+Our app also provides speech recognition feature so you can tell the movie name by pressing the Mic button. We all here to make you live easier.
 ## Authors:
 * S.Asylbekova  S.Karimov  S.Dhakkar  V.Nunez*
