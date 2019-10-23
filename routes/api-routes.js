@@ -116,23 +116,23 @@ module.exports = function(app) {
   
           //ACTOR BASED CALCULATIONS
          
-          if (
-            res.data.Actors.toLowerCase()
-              .split(", ")
-              .includes(actor.toLowerCase())
-          ) {
-            currentChecker++;
-          }
+          // if (
+          //   res.data.Actors.toLowerCase()
+          //     .split(", ")
+          //     .includes(actor.toLowerCase())
+          // ) {
+          //   currentChecker++;
+          // }
 
          
-          if (director === res.data.Director) {
-            currentChecker++
-          };
+          // if (director === res.data.Director) {
+          //   currentChecker++
+          // };
 
-          // WRITER CHECK
-          if (res.data.Writer.split(', '.includes(favWriters[0]))) {
-            currentChecker++
-          }
+          // // WRITER CHECK
+          // if (res.data.Writer.split(', '.includes(favWriters[0]))) {
+          //   currentChecker++
+          // }
   
           // CHECK TO SEE IF ITS THE BEST MOVIE RECOMMENDATION
           if (currentChecker > topCheck) {
