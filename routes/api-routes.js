@@ -1,5 +1,4 @@
 
-require("dotenv").config();
 var axios = require("axios");
 var keys = require("../keys");
 var db = require("../models");
@@ -34,7 +33,7 @@ module.exports = function(app) {
         phone: req.body.phone
       })
         .then(function() {
-          res.redirect(307, "/api/login");
+          res.redirect(307, "/signup");
         })
         .catch(function(err) {
           res.status(401).json(err);
