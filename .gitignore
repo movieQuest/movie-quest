@@ -3,3 +3,4 @@ package-lock.json
 .env
 config.json
 package-lock.json
+node_modules/dotenv/package.json
