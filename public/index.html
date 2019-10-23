@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>MovieQuest</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">MovieQuest</a>
+    <!-- <a class="navbar-brand" href="#">MovieQuest</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
@@ -70,7 +70,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="searchBtn">SEARCH</button>
-                <button type="button" class="btn btn-primary reset" id="reset">CLEAR RESULTS</button>
+                
               </form>
 
 
@@ -96,7 +96,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -124,6 +124,10 @@
       </div>
     </div>
 
+
+<!-- search result modal -->
+
+
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -134,7 +138,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div class="movie-search-results">
 
           </div>
           <div class="modal-footer">
@@ -144,7 +148,6 @@
         </div>
       </div>
     </div>
-
 
 
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Survey Page</title>
+    <title>MovieQuest</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -29,6 +29,8 @@
             <h1 class="text-center"><i class="fa fa-film"></i> MovieQuest <i class="fa fa-question"></i></h1>
             <hr>
             <h2 id="jumbo_h2" class="text-center">Movie survey</h2>
+            <h2>Fill out the survey to find movies with your favorite actors, directors, and
+                genres.</h2>
             <br>
 
             <div class="text-center">
@@ -101,7 +103,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">X</button>
-                        <h2 class="modal-title"><strong>Your most compatible friend</strong></h2>
+                        <h2 class="modal-title"><strong>The movie we recommend</strong></h2>
                     </div>
                     <div class="modal-body">
                         <h2 id="matchName"></h2>
@@ -118,8 +120,7 @@
 
         <footer class="footer">
             <div class="container">
-                <!-- <p class="bold"><a href="/api/friends">API Friends Link</a> |
-                    <a href="https://github.com/7saikal/heroku.git" target="_blank">GitHub Repo</a></p> -->
+                
             </div>
         </footer>
 
@@ -148,18 +149,19 @@
                 favoritemovie: $("#favoritemovie").val(),
             }
             console.log(data)
-            $.post("/api/survey", data)
-                .then(function (data) {
-                    console.log(data)
+            // $.post("/api/survey", data)
+            //     .then(function (data) {
+            //         console.log(data)
 
 
-                })
-                .catch (function(error){
-                    console.log (error)
+            //     })
+            //     .catch (function(error){
+            //         console.log (error)
 
-                })
+            //     })
 
 
+                $('#resultsModal').modal('toggle')
         });
 
         // modal logic
