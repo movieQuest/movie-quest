@@ -1,34 +1,48 @@
 <html>
+
 <head>
-<title></title>
-<!-- CSS Styles -->
-<style>
-    .speech {
-  border: 1px solid #DDD; width: 30px; padding: 0; margin: 0
-  }
-    .speech input {
-        border: 0;
-         width: 30px; 
-         display: inline-block;
-          height: 40px;
-          display: none;
-  
-  }
-    .speech img {
-  float: right; width: 40px;
-  }
-  </style>
+    <title></title>
+    <!-- CSS Styles -->
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2016/02/23/07/37/wall-1217083_960_720.jpg');
+            background-size: cover;
+            margin-left: 500px;
+            padding-top: 100px;
+        }
+
+        .speech {
+            border: 1px solid #DDD;
+            width: 30px;
+            padding: 0;
+            margin: 0
+        }
+
+        .speech input {
+            border: bold 1px black;
+            width: 400px;
+            height: 40px;
+
+        }
+
+        .speech img {
+            float: left;
+            width: 400px;
+        }
+    </style>
 </head>
+
 <body>
-<!-- Search Form -->
-<form id="speak" method="get" action="https://www.imdb.com/find?ref_=nv_sr_fn&q=&s=all">
-  <div class="speech">
-    <input type="text" name="q" id="transcript" placeholder="" />
-    <img onclick="saySomething()" src="https://img8.androidappsapk.co/300/0/6/1/com.triveous.recorder.png" alt="microphone logo"/>
-  </div>
+    <!-- Search Form -->
+    <form id="speak" method="get" action="https://www.imdb.com/find?ref_=nv_sr_fn&q=&s=all">
+        <div class="speech">
+            <input type="text" name="q" id="transcript" placeholder="" />
+            <img onclick="saySomething()" src="https://notepad.ai/img/microphone-gif-12.gif" alt="microphone logo" />
+        </div>
 
 
-<!--Speech Recognition from User-->
-<script type="text/javascript" src="js/mic.js"></script>
+        <!--Speech Recognition from User-->
+        <script type="text/javascript" src="js/mic.js"></script>
 </body>
+
 </html>
