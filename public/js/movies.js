@@ -1,5 +1,4 @@
 
-
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 $("#searchBtn").on("click", function (event) {
   event.preventDefault();

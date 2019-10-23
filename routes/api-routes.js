@@ -81,6 +81,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/survey", function(req, res) {
+    console.log(req.body)
     var recommendedMovie={};
     var topCheck = 0;
     var favMovie = req.body.favoritemovie;
