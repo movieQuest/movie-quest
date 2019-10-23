@@ -10,6 +10,8 @@ $("#searchBtn").on("click", function (event) {
   var movie = $("#search").val();
   console.log(movie);
   var queryURLPre = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+  
+
   queryURL = "";
   for (var i = 0; i < queryURLPre.length; i++) {
     if (queryURLPre[i] == " ") {
