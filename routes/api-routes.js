@@ -1,6 +1,7 @@
 
 var axios = require("axios");
 var keys = require("../keys");
+console.log(keys)
 var db = require("../models");
 var passport = require("../config/passport.js");
 var flash = require("connect-flash");
@@ -113,25 +114,25 @@ module.exports = function(app) {
             currentChecker++;
           }
   
-          //ACTOR BASED CALCULATIONS
+          // ACTOR BASED CALCULATIONS
          
-          // if (
-          //   res.data.Actors.toLowerCase()
-          //     .split(", ")
-          //     .includes(actor.toLowerCase())
-          // ) {
-          //   currentChecker++;
-          // }
+          if (
+            res.data.Actors.toLowerCase()
+              .split(", ")
+              .includes(actor.toLowerCase())
+          ) {
+            currentChecker++;
+          }
 
          
-          // if (director === res.data.Director) {
-          //   currentChecker++
-          // };
+          if (director === res.data.Director) {
+            currentChecker++
+          };
 
-          // // WRITER CHECK
-          // if (res.data.Writer.split(', '.includes(favWriters[0]))) {
-          //   currentChecker++
-          // }
+          // WRITER CHECK
+          if (res.data.Writer.split(', '.includes(favWriters[0]))) {
+            currentChecker++
+          }
   
           // CHECK TO SEE IF ITS THE BEST MOVIE RECOMMENDATION
           if (currentChecker > topCheck) {
