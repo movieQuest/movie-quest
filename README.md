@@ -6,7 +6,7 @@
 ##### [Click here to access our app](https://damp-falls-66003.herokuapp.com/)
 
   ## Home page
-<img width="1680" alt="mainpage" src="https://user-images.githubusercontent.com/52087686/67416940-61b5a980-f58d-11e9-8a6a-2cc3feb582a4.png">
+<img width="1680" alt="Screen Shot 2019-10-23 at 2 02 26 PM" src="https://user-images.githubusercontent.com/52087686/67427507-de528300-f5a1-11e9-8a6a-0b3ced54265f.png">
 
 #####  Search result
 
@@ -43,5 +43,7 @@ This is basics of login password authentication
 
 ### MicSearch function
 Our app also provides speech recognition feature so you can tell the movie name by pressing the Mic button. We all here to make you live easier.
+<img width="1038" alt="Screen Shot 2019-10-23 at 2 05 00 PM" src="https://user-images.githubusercontent.com/52087686/67427642-1659c600-f5a2-11e9-9867-322dcca1e2c2.png">
+
 ## Authors:
 * S.Asylbekova  S.Karimov  S.Dhakkar  V.Nunez*
