@@ -1,9 +1,9 @@
 <img width="1526" alt="Screen Shot 2019-10-23 at 1 06 03 AM" src="https://user-images.githubusercontent.com/52087686/67363598-56359480-f533-11e9-8b2e-cff996a43e9b.png">
 
 
-  Do you like watching movies in particular genres? Then this is the app you looking for. This is full stack web application that serves as a personal media library to keep track of movies that you would like to watch as well as the ones that you have watched already and save it as favorite.
+   Do you like watching movies in particular genres? Then this is the app you looking for. This is full stack web application that serves as a personal media library to keep track of movies that you would like to watch as well as the ones that you have watched already and save it as favorite.
 
-##### [Click here to access our app](https://www.google.com)
+##### [Click here to access our app](https://damp-falls-66003.herokuapp.com/)
 
   ## Home page
 <img width="1680" alt="main page" src="https://user-images.githubusercontent.com/52087686/67365638-9bf45c00-f537-11e9-844d-68b1f00dec89.png">
@@ -36,11 +36,11 @@ This is basics of login password authentication
 
 ###   Functionality 
 
+- Create an account
 - Log in
 - via username & password
 - via email & password
-- Create an account
 - Log out
 
 ## Authors:
-* S.Lastname  S.Karimov  S.Lastname  V.Lastname*
+* S.Asylbekova  S.Karimov  S.Dhakkar  V.Nunez*
